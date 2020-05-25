@@ -1,0 +1,112 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const config = require("./config.json");
+const alexa = require('alexa-bot-api');
+var chatbot = new alexa('aw2plm')
+
+client.on("ready", () => {
+  console.log(`O bot foi iniciado, com ${client.users.cache.size} usuários e em ${client.guilds.cache.size} servidores.`);
+  client.user.setActivity(`Eu estou em ${client.guilds.cache.size} servidor(es)`);
+});
+
+
+client.on("guildCreate", guild => {
+  console.log(`O bot entrou no servidor: ${guild.name} (id: ${guild.id}). População: ${guild.menberCount} membros!`);
+  client.user.setActivity(`Estou em ${client.guild} servidores`);
+});
+
+
+client.on("guildDelete", guild => {
+  console.log(`O bot foi removido do servidor: ${guild.name} (id: ${guild.id})`);
+  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+});
+
+client.on("message", async message => {
+if (message.author.bot) return;
+if (message.channel.type === "dm") return;
+if (!message.content.startsWith(config.prefix)) return;
+if (message.content.startsWith(`<@${client.user.id}`) || message.content.startsWith(`<@${client.user.id}`)) return;
+
+let args = message.content.split(" ").slice(1);
+let command = message.content.split(" ")[0];
+command = command.slice(config.prefix.length);
+try {
+  let commandFile = require(`./commands/${command}.js`);
+  delete require.cache[require.resolve(`./commands/${command}.js`)];
+  return commandFile.run(client, message, args);
+} catch (err) {
+  console.error("Erro:" + err);
+}
+});
+
+client.on('ready', () => {
+ console.log('ready')
+
+});
+
+client.on('message', async message => {
+
+  if(message.author.bot) return;
+  if(message.channel.id != '714223817073098783')return;
+let content = message.content;
+chatbot.getReply(content).then(r => message.channel.send(r))
+
+
+})
+
+client.on("message", async message => {
+
+  if(message.author.bot) return;    
+  if(message.channel.type === "dm") return;
+
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const comando = args.shift().toLowerCase();
+
+  if(comando === "ping") {
+    const m = await message.channel.send("sx!ping");
+    m.edit(`:ping_pong: Pong!\nA latência é ${m.createdTimestamp - message.createdTimestamp}ms.\nA latência da API é: ${Math.round(client.ws.ping)}ms`);
+  }
+
+});
+
+client.on("guildMemberAdd", async member => {
+
+  const soraya = client.users.cache.get('594251581789044756');
+  let canal = client.channels.cache.get("711373672560066601")
+  const joinEmbed = new Discord.MessageEmbed()
+	.setColor('#0099ff')
+	.setTitle(member.user.tag)
+	.setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
+	.setDescription('Bem-Vindo(a) ao Desocupados')
+	.setThumbnail(member.user.avatarURL())
+	.addFields(
+    { name: 'Quer uma parceria?', value: `Chame o ${soraya} no privado para mais informações` },
+    { name: 'Não esqueça de se registrar no:', value: '<#711373689504923708>' }
+  )
+  .addField('Leia as regras', '<#711670368112476181>', true)
+	.setImage('https://i.imgur.com/JCDNqeM.png')
+	.setTimestamp()
+	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+
+
+  canal.send(joinEmbed);
+  });
+  
+  client.on("guildMemberRemove", async member => {
+  
+    const soraya = client.users.cache.get('594251581789044756');
+    let canal = client.channels.cache.get("711373673310978150");
+    const leftEmbed = new Discord.MessageEmbed()
+    .setColor('#0099ff')
+    .setTitle('; - ; triste estou')
+    .setAuthor(member.user.tag, member.user.avatarURL())
+    .setDescription(`${member.user.username} Saiu do servidor ; -;`)
+    .setThumbnail(member.user.avatarURL())
+    .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+
+    canal.send(leftEmbed);
+});
+
+
+client.login(config.token);
+
