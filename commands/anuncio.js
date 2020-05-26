@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 
 exports.run = (bot, message, args) => {
-    let splirtarg = args.join (" ").split (" / ");
+    let splitarg = args.join (" ").split (" / ");
     if (!message.member.permissions.has("MANAGE_MESSAGES")){
 
         const soraya = client.users.cache.get('594251581789044756');
@@ -22,7 +22,7 @@ const soraya = client.users.cache.get('594251581789044756');
 const embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle(`${message.author.username}`)
-.setDescription('forneça um número de até 100 mensagens a serem excluídas')
+.setDescription(aAnnouncement)
 .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
 
 let aChannel = bot.channels.get("712550062210678854")
