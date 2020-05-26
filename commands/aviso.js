@@ -15,10 +15,10 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('#0099ff')
-  .setTitle('<a:christmas_parrot:711787152350117989>Economia<a:christmas_parrot:711787152350117989>')
+  .setTitle('<a:Mupeti:714695782233800734>Aviso<a:Mupeti:714695782233800734>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png', 'https://discord.js.org')
   .addFields(
-  { name: 'Um novo item foi adicionado ao Shop da Econimia', value: 'O novo item é a Web Namorada'},
+  { name: 'Quando o server bater 200 membros', value: 'Um sorteio especial vai acontecer!'},
   )   
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
