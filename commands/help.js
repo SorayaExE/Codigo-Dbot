@@ -26,8 +26,6 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.author.send(embed);
-}
-exports.run = async (client, message, args) => {
 
   var list = [
   ];
@@ -37,8 +35,8 @@ exports.run = async (client, message, args) => {
     .setColor('#0099ff')
     .setTitle('Help Desocupado Bot')
     .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
+    .setDescription('Comandos enviados no seu privado!')
     .addFields(
-    {value: 'Comandos enviados no seu privado!' },
     )
     .setTimestamp()
     .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
