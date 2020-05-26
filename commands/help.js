@@ -23,17 +23,5 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   { name: 'Para fazer carinho em alguém:', value: 'digite d!carinho (@do usuário)' },
   { name: 'Para pegar um lolicon:', value: 'digite d!lolicon (@do usuário)' }
 )
-  .setTimestamp()
-  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-  message.delete().catch(O_o => {});
-  message.channel.send()
-        .setTitle('Help Desocupado Bot')
-        .setColor('#000000')
-        .setDescription('Comandos enviados ao seu privado')
-        .setImage(rand)
-        .setTimestamp()
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
-        .setAuthor(message.author.tag);
-
   await message.author.send(embed);
 }
