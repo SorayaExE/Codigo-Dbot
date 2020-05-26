@@ -2,16 +2,6 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
     
-
-        const soraya = client.users.cache.get('594251581789044756');
-        const embed = new Discord.MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle(`${message.author.username}`)
-        .setDescription('Comandos enviados no seu privado!')
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-        return message.reply(embed)
-    }
-  
 var list = [
 ];
 let avatar = message.author.displayAvatarURL({format: "png"});
@@ -37,3 +27,11 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   message.author.send(embed);
   
+const soraya = client.users.cache.get('594251581789044756');
+const embed = new Discord.MessageEmbed()
+.setColor('#0099ff')
+.setTitle(`${message.author.username}`)
+.setDescription('Comandos enviados no seu privado!')
+.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+return message.reply(embed)
+  }
