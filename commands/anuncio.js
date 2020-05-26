@@ -16,7 +16,7 @@ exports.run = (bot, message, args) => {
 let aTitle = splitarg[0];
 let aAnnouncement = splitarg[1];
 
-let aEmbed = Discord.RichEmbed()
+let aEmbed = Discord.cache.RichEmbed()
 
 const soraya = client.users.cache.get('594251581789044756');
 const embed = new Discord.MessageEmbed()
