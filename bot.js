@@ -16,7 +16,7 @@ client.on("ready", () => {
   i = 0;
   setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {
     type: "PLAYING"
-  }), 5000 * 60); //WATCHING, LISTENING, PLAYING, STREAMING
+  }), 50000); //WATCHING, LISTENING, PLAYING, STREAMING
   console.log ('Estou online!')
 
 });
