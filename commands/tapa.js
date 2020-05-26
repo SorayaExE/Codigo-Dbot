@@ -8,7 +8,10 @@ var list = [
    'https://imgur.com/UB1eB1J.gif',
    'https://imgur.com/diCYPGJ.gif',
    'https://imgur.com/TkdzgMa.gif',
-   'https://imgur.com/VYVeRF0.gif'
+   'https://imgur.com/VYVeRF0.gif',
+   'https://imgur.com/EmuGy1e.gif',
+   'https://imgur.com/2PrNcGz.gif',
+   'https://imgur.com/gVtj1w5.gif',
 ];
 
 var rand = list[Math.floor(Math.random() * list.length)];

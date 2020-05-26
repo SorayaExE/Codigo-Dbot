@@ -6,7 +6,15 @@ var list = [
   'https://imgur.com/FLxByeG.gif',
   'https://imgur.com/VyAd226.png',
   'https://imgur.com/5TQKchr.png',
-  'https://imgur.com/s22vDpm.png'
+  'https://imgur.com/s22vDpm.png',
+  'https://imgur.com/jCEwAT1.gif',
+  'https://imgur.com/zK7jR7b.gif',
+  'https://imgur.com/NhQBZ3K.gif',
+  'https://imgur.com/aBgC6XA.gif',
+  'https://imgur.com/sRlu4K5.gif',
+  'https://imgur.com/zn5KNW6.gif',
+  'https://imgur.com/wQKF9Ro.gif',
+  'https://imgur.com/V7zjnkc.gif',
 ];
 
 var rand = list[Math.floor(Math.random() * list.length)];
@@ -28,7 +36,7 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   const embed = new Discord.MessageEmbed()
         .setTitle('Loli???')
         .setColor('#000000')
-        .setDescription(`${message.author} acaba de chamar o lolicon ${user}`)
+        .setDescription(`${message.author} acaba de denunciar ${user}`)
         .setImage(rand)
         .setTimestamp()
         .setThumbnail(avatar)

@@ -9,7 +9,12 @@ var list = [
   'https://imgur.com/AXyaavd.gif',
   'https://imgur.com/1FAQjxa.gif',
   'https://imgur.com/AH8a9Cg.gif',
-  'https://imgur.com/JP15TVN.gif'
+  'https://imgur.com/JP15TVN.gif',
+  'https://imgur.com/zqR87DA.gif',
+  'https://imgur.com/i9LWcPk.gif',
+  'https://imgur.com/skzuwyz.gif',
+  'https://imgur.com/ANw7LnB.gif',
+  'https://imgur.com/SwcBcBF.gif'
 ];
 
 var rand = list[Math.floor(Math.random() * list.length)];

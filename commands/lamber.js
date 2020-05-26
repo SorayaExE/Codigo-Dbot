@@ -10,7 +10,19 @@ var list = [
   'https://imgur.com/DZxu9Bd.gif',
   'https://imgur.com/eDdarn9.gif',
   'https://imgur.com/XBYFilY.gif',
-  'https://imgur.com/MN6FNyk.gif'
+  'https://imgur.com/MN6FNyk.gif',
+  'https://imgur.com/wIuNMBw.gif',
+  'https://imgur.com/E28vKpB.gif',
+  'https://imgur.com/gk3afZo.gif',
+  'https://imgur.com/udrVfm9.gif',
+  'https://imgur.com/HbECGOz.gif',
+  'https://imgur.com/qi8TYvI.gif',
+  'https://imgur.com/zOaQdBD.gif',
+  'https://imgur.com/iojun5T.gif',
+  'https://imgur.com/QsWP7aZ.gif',
+  'https://imgur.com/n8SSxXp.gif',
+  'https://imgur.com/eMbQy97.gif',
+  'https://imgur.com/SmvWUYI.gif'
 ];
 
 var rand = list[Math.floor(Math.random() * list.length)];
