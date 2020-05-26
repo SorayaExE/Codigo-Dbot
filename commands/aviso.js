@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
   .setTitle('<a:christmas_parrot:711787152350117989>Economia<a:christmas_parrot:711787152350117989>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png', 'https://discord.js.org')
   .addFields(
-  { name: 'Um novo item foi adicionado ao Shop da <#712780537269452903>', value: 'O novo item é a Web Namorada'},
+  { name: 'Um novo item foi adicionado ao Shop da Econimia', value: 'O novo item é a Web Namorada'},
   )   
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
