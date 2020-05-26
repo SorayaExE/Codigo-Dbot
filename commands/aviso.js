@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
   let avatar = message.author.displayAvatarURL({format: "png"});
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
-  .setColor('#0099ff')
+  .setColor('RANDOM')
   .setTitle('<a:Mupeti:714695782233800734>Aviso<a:Mupeti:714695782233800734>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png', 'https://discord.js.org')
   .addFields(
