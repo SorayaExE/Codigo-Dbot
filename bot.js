@@ -98,6 +98,30 @@ client.on("guildMemberAdd", async member => {
 
   canal.send(joinEmbed);
   });
+
+  client.on("guildMemberAdd", member => {
+    
+    const soraya = client.users.cache.get('594251581789044756');
+    let canal = client.channels.cache.get("711373672560066601")
+    const joinEmbed = new Discord.MessageEmbed()
+    .setColor('#0099ff')
+    .setTitle(member.user.tag)
+    .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
+    .setDescription('Bem-Vindo(a) ao Desocupados')
+    .addFields(
+      { name: 'Quer uma parceria?', value: 'Consulte o chat Informações na categoria de parceria' },
+      { name: 'Não esqueça de se registrar no:', value: '<#711373689504923708>' },
+      { name: 'Qualquer duvida sobre o bot Desocupado use:', value: 'd!help que o bot vai lhe mandar os comandos no seu privado' },
+      { name: 'Qualquer bug ou denuncia', value: 'chame um staff no privado!' },
+      
+    )
+    .addField('Leia as regras', '<#711670368112476181>', true)
+    .setImage('https://i.imgur.com/JCDNqeM.png')
+    .setTimestamp()
+    .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+
+    member.send(joinEmbed);
+    });
   
   client.on("guildMemberRemove", async member => {
   
