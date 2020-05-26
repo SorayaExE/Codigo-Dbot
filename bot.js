@@ -6,7 +6,18 @@ var chatbot = new alexa('aw2plm')
 
 client.on("ready", () => {
   console.log(`O bot foi iniciado, com ${client.users.cache.size} usuários e em ${client.guilds.cache.size} servidores.`);
-  client.user.setActivity(`Eu estou em ${client.guilds.cache.size} servidor(es)`);
+  let activities = [
+    `a`,
+    `s`,
+    `c`,
+    `f`,
+  ],
+  i = 0;
+  setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {
+    type: "PLAYING"
+  }), 5000); //WATCHING, LISTENING, PLAYING, STREAMING
+  console.log ('Estou online!')
+
 });
 
 
@@ -37,11 +48,6 @@ try {
 } catch (err) {
   console.error("Erro:" + err);
 }
-});
-
-client.on('ready', () => {
- console.log('ready')
-
 });
 
 client.on('message', async message => {
@@ -106,6 +112,8 @@ client.on("guildMemberAdd", async member => {
 
     canal.send(leftEmbed);
 });
+
+
 
 
 client.login(config.token);
