@@ -26,5 +26,16 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   message.delete().catch(O_o => {});
+  message.channel.send()
+  const soraya = client.users.cache.get('594251581789044756');
+  const embed = new Discord.MessageEmbed()
+        .setTitle('Help Desocupado Bot')
+        .setColor('#000000')
+        .setDescription('Comandos enviados ao seu privado')
+        .setImage(rand)
+        .setTimestamp()
+        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
+        .setAuthor(message.author.tag);
+
   await message.author.send(embed);
 }
