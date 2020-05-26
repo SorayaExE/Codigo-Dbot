@@ -23,5 +23,6 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   { name: 'Para fazer carinho em alguém:', value: 'digite d!carinho (@do usuário)' },
   { name: 'Para pegar um lolicon:', value: 'digite d!lolicon (@do usuário)' }
 )
+  message.channel.send('Comandos enviados no seu privado!')
   await message.author.send(embed);
 }
