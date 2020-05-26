@@ -25,5 +25,6 @@ let avatar = message.author.displayAvatarURL({format: "png"});
 )
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+  message.delete().catch(O_o => {});
   await message.author.send(embed);
 }
