@@ -7,10 +7,11 @@ var chatbot = new alexa('aw2plm')
 client.on("ready", () => {
   console.log(`O bot foi iniciado, com ${client.users.cache.size} usuários e em ${client.guilds.cache.size} servidores.`);
   let activities = [
-    `a`,
-    `s`,
-    `c`,
-    `f`,
+    `Você na minha cama`,
+    `Meu prefixo é d!`,
+    `Trabaiando para o Soraya`,
+    `Venha conversar comigo!`,
+    `Utilize ${config.prefix}help para obter ajuda!`
   ],
   i = 0;
   setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {
