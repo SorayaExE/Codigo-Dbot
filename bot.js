@@ -16,7 +16,7 @@ client.on("ready", () => {
   i = 0;
   setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {
     type: "PLAYING"
-  }), 50000); //WATCHING, LISTENING, PLAYING, STREAMING
+  }), 5000); //WATCHING, LISTENING, PLAYING, STREAMING
   console.log ('Estou online!')
 
 });
@@ -82,7 +82,7 @@ client.on("guildMemberAdd", async member => {
   let canal = client.channels.cache.get("711373672560066601")
   const joinEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
-	.setTitle(`${user}`)
+	.setTitle(member.user.tag)
 	.setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
 	.setDescription('Bem-Vindo(a) ao Desocupados')
 	.setThumbnail(member.user.avatarURL())
@@ -106,7 +106,7 @@ client.on("guildMemberAdd", async member => {
     const leftEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle('; - ; triste estou')
-    .setAuthor(`${user}`, member.user.avatarURL())
+    .setAuthor(member.user.tag, member.user.avatarURL())
     .setDescription(`${member.user.username} Saiu do servidor ; -;`)
     .setThumbnail(member.user.avatarURL())
     .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
