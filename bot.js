@@ -116,7 +116,7 @@ client.on("guildMemberAdd", async member => {
       
     )
     .addField('Leia as regras', '<#711670368112476181>', true)
-    .setImage('https://i.imgur.com/JCDNqeM.png')
+    .setImage('https://imgur.com/A5uLKUE.gif')
     .setTimestamp()
     .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
 
