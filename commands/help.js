@@ -23,7 +23,9 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   { name: 'Para fazer carinho em alguém:', value: 'digite d!carinho (@do usuário)' },
   { name: 'Para pegar um lolicon:', value: 'digite d!lolicon (@do usuário)' }
 )
-  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
+  .setTimestamp()
+  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+  message.delete().catch(O_o => {});
   message.channel.send('Comandos enviados no seu privado!')
   await message.author.send(embed);
 }
