@@ -9,7 +9,7 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   const embed = new Discord.MessageEmbed()
   .setColor('#0099ff')
   .setTitle('Help Desocupado Bot')
-  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
+  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png', 'https://discord.js.org')
   .setDescription('Aqui vai os meus comandos')
   .addFields(
   { name: 'Lembrando que comandos obcenos é em:', value: '<#711495500523765841>' },
@@ -25,20 +25,5 @@ let avatar = message.author.displayAvatarURL({format: "png"});
 )
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-  await message.author.send(embed); return;
-
-  var list = [
-  ];
-  let avatar = message.author.displayAvatarURL({format: "png"});
-  const soraya = client.users.cache.get('594251581789044756');
-  const embed = new Discord.MessageEmbed()
-    .setColor('#0099ff')
-    .setTitle('Help Desocupado Bot')
-    .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-    .setDescription('Comandos enviados no seu privado!')
-    .addFields(
-    )
-    .setTimestamp()
-    .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-    await message.channel.send(embed);
-  }
+  await message.author.send(embed);
+}
