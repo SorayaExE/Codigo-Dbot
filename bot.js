@@ -101,8 +101,8 @@ client.on("guildMemberAdd", async member => {
 
   client.on("guildMemberAdd", async member => {
 
+  let avatar = message.author.displayAvatarURL({format: "png"});
     const soraya = client.users.cache.get('594251581789044756');
-    let canal = client.channels.cache.get("711373672560066601")
     const joinembed = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle(member.user.tag)
@@ -123,7 +123,7 @@ client.on("guildMemberAdd", async member => {
     .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   
   
-    message.member.send(joinembed);
+    message.member(joinembed);
     });
   
   client.on("guildMemberRemove", async member => {
