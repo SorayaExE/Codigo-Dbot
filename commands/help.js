@@ -30,7 +30,6 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   var list = [
   ];
   let = message.author.displayAvatarURL({format: "png"});
-    const soraya = client.users.cache.get('594251581789044756');
     const embed = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle('Help Desocupado Bot')
