@@ -25,12 +25,13 @@ let avatar = message.author.displayAvatarURL({format: "png"});
 )
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-  await message.author.send(embed);
+  await message.author.send(embed); return;
 
   var list = [
   ];
-  let = message.author.displayAvatarURL({format: "png"});
-    const embed = new Discord.MessageEmbed()
+  let avatar = message.author.displayAvatarURL({format: "png"});
+  const soraya = client.users.cache.get('594251581789044756');
+  const embed = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle('Help Desocupado Bot')
     .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
