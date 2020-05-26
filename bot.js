@@ -82,7 +82,7 @@ client.on("guildMemberAdd", async member => {
   let canal = client.channels.cache.get("711373672560066601")
   const joinEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
-	.setTitle(member.user.tag)
+	.setTitle(`${user}`)
 	.setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
 	.setDescription('Bem-Vindo(a) ao Desocupados')
 	.setThumbnail(member.user.avatarURL())
@@ -106,7 +106,7 @@ client.on("guildMemberAdd", async member => {
     const leftEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle('; - ; triste estou')
-    .setAuthor(member.user.tag, member.user.avatarURL())
+    .setAuthor(`${user}`, member.user.avatarURL())
     .setDescription(`${member.user.username} Saiu do servidor ; -;`)
     .setThumbnail(member.user.avatarURL())
     .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
