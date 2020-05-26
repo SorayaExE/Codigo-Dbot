@@ -123,7 +123,7 @@ client.on("guildMemberAdd", async member => {
     .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   
   
-    message.author.send(joinembed);
+    message.member.send(joinembed);
     });
   
   client.on("guildMemberRemove", async member => {
