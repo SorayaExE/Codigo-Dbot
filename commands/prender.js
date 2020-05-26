@@ -30,7 +30,7 @@ if (!user) {
     return message.reply(embed)
   };
 /*
-message.channel.send(`${message.author.username} **acaba de beijar** ${user.username}! :heart:`, {files: [rand]});
+message.channel.send(`${message.author.username} **acaba de prender** ${user.username}! :heart:`, {files: [rand]});
 */
 let avatar = message.author.displayAvatarURL({format: "png"});
   const soraya = client.users.cache.get('594251581789044756');
