@@ -1,62 +1,54 @@
-const Discord = require('discord.js')
-
-module.exports.run = async (client, message, args) => {
-    if (!message.member.permissions.has("BAN_MEMBERS")){
-
-   const soraya = client.users.cache.get('594251581789044756');
-     const lembed = new Discord.MessageEmbed()
-       .setColor('#0099ff')
+const {MessageEmbed} = require('discord.js')
+module.exports={
+    name: "ban",
+    description: "Ban a specified user from the server",
+    category:"moderation",
+    usage: "<user id> <reason>",
+    run: async(bot,message,args)=>{
+        if(!args[0]){
+        const bembed = new MessageEmbed()
+        .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
-        .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando')
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-        return message.reply(lembed)
+        .setDescription('Especifique quem você deseja banir! (Indique o ID do usuário ou nome de usuário)!');
+        return message.channel.send(bembed)
     }
-        let member = message.mentions.users.first();
-        if(!member){
-        const soraya = client.users.cache.get('594251581789044756');
-        const oembed = new Discord.MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle(`${message.author.username}`)
-        .setDescription('Você esqueceu de mencionar um usuário!')
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-        return message.reply(oembed)
-}
-        if(!member.bannable){
-        const soraya = client.users.cache.get('594251581789044756');
-        const iembed = new Discord.MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle(`${message.author.username}`)
-        .setDescription('Não posso banir esse membro ele pode ter um cargo maior que o meu!')
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-        return message.reply(iembed)
+        let User = message.guild.members.cache.get(args[0])
+        if(!User){
+            const bembed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle(`${message.author.username}`)
+            .setDescription('Esse não é um usuário no servidor! Tente novamente!');
+            return message.channel.send(bembed)
         }
-        let reason = args.slice(1).join(' ')
-        if(!reason) reason = "Nenhuma razão fornecida"
-        await member.ban(reason)
-        const soraya = client.users.cache.get('594251581789044756');
-        const uembed = new Discord.MessageEmbed()
+        let Reason = message.content.split(`!ban ${User.id} `)
+        if(!args[1]){
+            const bembed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle(`${message.author.username}`)
+            .setDescription('Especifique um motivo! Você não pode banir alguém sem motivo, pode?');
+            return message.channel.send(bembed)
+        }
+        if(!Reason) {
+        const bembed = new MessageEmbed()
         .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
-        .setDescription(`Desculpe ${message.author} nao consigo banir o membro devido a erros `)
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
-        .catch(error => message.reply(uembed))
+        .setDescription('Especifique um motivo! Você não pode banir alguém sem motivo, pode?');
+        return message.channel.send(bembed)
+    }
+   //     if(!User.banable)return message.channel.send(`You can not ban this user, they may have a role higher then me or the same role as me.`)
+        if (!message.member.permissions.has("BAN_MEMBERS")){
 
-        message.channel.send(`${message.author}`)
-
-        let pEmbed = new Discord.RichEmbed()
-        .setColor('#0099ff')
-        .setTitle(":hammer: Ban")
-        .setDescription("Membro banido:", `${member.user}`)
-        .addField("Banido por:", `${massage.author}`)
-        .addField("Motivo:", `${reason}`)
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
-
-        message.channel.send(pEmbed)
-
-
-        module.exports.help = {
-            name: "ban"
+            const aembed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle(`${message.author.username}`)
+            .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando');
+            return message.reply(aembed)
         }
-
-    
+        User.ban(Reason)
+        const Embed = new MessageEmbed()
+        .setTitle(`Você baniu um membro!:hammer:`)
+        .setDescription(`Você baniu o usuário ${bot.users.cache.get(User.id).username} do server!`)
+        .setColor(`RANDOM`)
+        message.channel.send(Embed)
+    }
 }
