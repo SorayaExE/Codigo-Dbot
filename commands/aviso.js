@@ -15,11 +15,9 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:Mupeti:714695782233800734>Aviso<a:Mupeti:714695782233800734>')
-  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png', 'https://discord.js.org')
-  .addFields(
-  { name: 'Quando o server bater 200 membros', value: 'Um sorteio especial vai acontecer!'},
-  )   
+  .setTitle('<a:sapin:714717157656756235>Votação<a:sapin:714717157656756235>')
+  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
+  .setDescription('Querem fazer uma batalha de rima?')
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
