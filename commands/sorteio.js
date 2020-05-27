@@ -6,36 +6,13 @@ module.exports={
     usage: '<tempo> <canal> <premio>',
     category: 'fun',
     run: async(bot,message,args)=>{
-            if (!message.member.permissions.has("BAN_MEMBERS")){
-                const soraya = client.users.cache.get('594251581789044756');
-                const aembed = new Discord.MessageEmbed()
-                .setColor('#0099ff')
-                .setTitle(`${message.author.username}`)
-                .setDescription('Você é fraco, lhe falta permissão de ademir para usar esse comando')
-                .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-                return message.reply(aembed)
-            }
-
-        if(!args[0]){
-        const soraya = client.users.cache.get('594251581789044756');
-        const bembed = new Discord.MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle(`${message.author.username}`)
-        .setDescription('Você não especificou o tempo!')
-        .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-        return message.channel.send(`bembed`)
-        }
-        if(!args[0]
-        .endsWith("d")&&!args[0].endsWith("h")&&!args[0].endsWith("m")) 
-        return message.channel.send(`Você não usou a formatação correta para o horário!`)
-        if(isNaN(args[0][0]))
-        return message.channel.send(`Isso não é um número!`)
+        if(!args[0]) return message.channel.send(`Você não especificou o tempo!`)
+        if(!args[0].endsWith("d")&&!args[0].endsWith("h")&&!args[0].endsWith("m")) return message.channel.send(`Você não usou a formatação correta para o horário!`)
+        if(isNaN(args[0][0])) return message.channel.send(`Isso não é um número!`)
         let channel = message.mentions.channels.first()
-        if(!channel) 
-        return message.channel.send(`Não encontrei esse canal!`)
+        if(!channel) return message.channel.send(`Não encontrei esse canal!`)
         let prize = args.slice(2).join(" ")
-        if(!prize)
-        return message.channel.send(`Você nao especificou o tempo`)
+        if(!prize) return message.channel.send(`Você nao especificou o tempo`)
         message.channel.send(`*Sorteio criado no ${channel}*`)
         let Embed = new MessageEmbed()
         .setTitle(`Novo sorteio!`)
@@ -51,7 +28,7 @@ module.exports={
             }
             
             let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
-            channel.send(`O vencedor do sorteio de **${prize}** é... ${winner}`)
+            channel.send(`O vencedor do sorteio foi **${prize}** é... ${winner}`)
         }, ms(args[0]));
-  }
+    }
 }
