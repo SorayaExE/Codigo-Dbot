@@ -12,7 +12,7 @@ client.on("ready", () => {
     `Trabaiando para o Soraya`,
     `Venha conversar comigo no chat de Inteligencia-artificial!`,
     `Utilize ${config.prefix}help para obter ajuda!`,
-    `Estou na versão 1.0`
+    `Estou na versão 1.5`
   ],
   i = 0;
   setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {
