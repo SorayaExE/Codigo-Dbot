@@ -17,8 +17,10 @@ exports.run = async (client, message, args) => {
   .setColor('RANDOM')
   .setTitle('<a:ouu:714717157178736650>Sorteios<a:ouu:714717157178736650>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription('Novo chat de sorteios!!!')
   .setDescription('Agora o bot Desocupado faz sorteios!!!!')
+  .addFields(
+  {value: 'Novo chat de sorteios!!!!' },
+  )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
