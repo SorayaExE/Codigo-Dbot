@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .setDescription('Agora o bot Desocupado faz sorteios!!!!')
   .addFields(
-  {value: 'Novo chat de sorteios!!!!' },
+  {name: 'Novo chat de sorteios!!!!' },
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
