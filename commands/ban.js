@@ -5,6 +5,14 @@ module.exports={
     category:"moderation",
     usage: "<user id> <reason>",
     run: async(bot,message,args)=>{
+        if (!message.member.permissions.has("BAN_MEMBERS")){
+
+            const aembed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle(`${message.author.username}`)
+            .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando');
+            return message.reply(aembed)
+        }
         if(!args[0]){
         const bembed = new MessageEmbed()
         .setColor('#0099ff')
@@ -35,15 +43,6 @@ module.exports={
         .setDescription('Especifique um motivo! Você não pode banir alguém sem motivo, pode?');
         return message.channel.send(bembed)
     }
-   //     if(!User.banable)return message.channel.send(`You can not ban this user, they may have a role higher then me or the same role as me.`)
-        if (!message.member.permissions.has("BAN_MEMBERS")){
-
-            const aembed = new MessageEmbed()
-            .setColor('#0099ff')
-            .setTitle(`${message.author.username}`)
-            .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando');
-            return message.reply(aembed)
-        }
         User.ban(Reason)
         const Embed = new MessageEmbed()
         .setTitle(`Você baniu um membro!:hammer:`)

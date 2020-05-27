@@ -5,6 +5,14 @@ module.exports={
     category:"moderation",
     usage: "<user id> <reason>",
     run: async(bot,message,args)=>{
+        if (!message.member.permissions.has("KICK_MEMBERS")){
+
+            const aembed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle(`${message.author.username}`)
+            .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando');
+            return message.reply(aembed)
+        }
         if(!args[0]){
             const bembed = new MessageEmbed()
             .setColor('#0099ff')
@@ -41,14 +49,6 @@ module.exports={
             .setTitle(`${message.author.username}`)
             .setDescription('Você não pode expulsar esse usuário, ele pode ter um cargo superior a mim ou o mesmo cargo que eu.');
             return message.channel.send(fembed)
-        }
-        if (!message.member.permissions.has("KICK_MEMBERS")){
-
-            const aembed = new MessageEmbed()
-            .setColor('#0099ff')
-            .setTitle(`${message.author.username}`)
-            .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando');
-            return message.reply(aembed)
         }
         User.kick(Reason)
         const Embed = new MessageEmbed()
