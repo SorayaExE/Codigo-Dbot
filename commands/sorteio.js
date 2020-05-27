@@ -58,10 +58,11 @@ module.exports={
         message.channel.send(gembed)
 {
         let Embed = new MessageEmbed()
-        .setTitle(`Novo sorteio!`)
+        .setTitle(`<a:doguin:714717157098913822>Novo sorteio!<a:doguin:714717157098913822>`)
         .setDescription(`O ${message.author} está iniciando um sorteio e o premio é **${prize}**`)
         .setTimestamp(Date.now()+ms(args[0]))
         .setColor('#0099ff')
+        .setFooter(`Desenvolvido por Soraya{Savanna}#7027`);
         let m = await channel.send(Embed)
         m.react("🎉")
 }
@@ -78,11 +79,7 @@ module.exports={
             }
             
             let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
-            const iembed = new MessageEmbed()
-            .setColor('#0099ff')
-            .setTitle(`${message.author.username}`)
-            .setDescription(`O vencedor do sorteio que estava valendo **${prize}** é... ${winner}`);
-            channel.send(iembed)
+            channel.send(`O vencedor do sorteio que estava valendo **${prize}** é... ${winner}`)
         }, ms(args[0]));
     }
 }
