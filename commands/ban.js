@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
         const uembed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
-        .setDescription(`Desculpe ${message.author} nao consigo banir o membro devido o : ${error} `)
+        .setDescription(`Desculpe ${message.author} nao consigo banir o membro devido a erros `)
         .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
         .catch(error => message.reply(uembed))
 
