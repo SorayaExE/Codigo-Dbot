@@ -12,7 +12,7 @@ module.exports={
             .setColor('#0099ff')
             .setTitle(`${message.author.username}`)
             .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando')
-            .setFooter(`Desenvolvido por Soraya{Savanna}#7027 `);
+            .setFooter('Desenvolvido por Soraya{Savanna}');
             return message.reply(aembed)
         }
         if(!args[0])return message.channel.send(`Você não especificou o tempo!`)
