@@ -63,22 +63,15 @@ module.exports={
         .setTimestamp(Date.now()+ms(args[0]))
         .setColor('#0099ff')
         .setFooter(`Desenvolvido por Soraya{Savanna}#7027`);
-         await channel.send(Embed)
+        let m = await channel.send(Embed)
         m.react("🎉")
 }
         setTimeout(() => {
             if(m.reactions.cache.get("🎉").count<=1){
-                message.channel.send(`Reactions: ${reactions.cache.get("🎉").count}`) 
-{
-                    const hembed = new MessageEmbed()
-                    .setColor('#0099ff')
-                    .setTitle(`${message.author.username}`)
-                    .setDescription('Poucas pessoas reagiram para ter um vencedor!');
-                return message.channel.send(hembed)
-                }
+                    message.channel.send(`Reactions: ${m.reactions.cache.get("🎉").count}`)
+                    return message.channel.send(`Poucas pessoas reagiram para ter um vencedor!`)
             }
-            
-            let winner = reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
+            let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
             channel.send(`O vencedor do sorteio que estava valendo **${prize}** é... ${winner}`)
         }, ms(args[0]));
     }
