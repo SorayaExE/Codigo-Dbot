@@ -74,7 +74,7 @@ module.exports={
         let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
         const hembed = new MessageEmbed()
         .setColor('#0099ff')
-        .setTitle(`${winner}`)
+        .setTitle('<a:Mupeti:714695782233800734>Parabens!!!<a:Mupeti:714695782233800734>')
         .setDescription(`O vendedor do sorteio que estava valendo **${prize}** é... ${winner}`);
         channel.send(hembed)
     }, ms(args[0]));
