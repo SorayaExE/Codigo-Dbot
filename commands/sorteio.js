@@ -72,7 +72,11 @@ module.exports={
         }
         
         let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
-        channel.send(`O vendedor do sorteio que estava valendo **${prize}** é... ${winner}`)
+        const hembed = new MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle(`${message.author.username}`)
+        .setDescription(`O vendedor do sorteio que estava valendo **${prize}** é... ${winner}`);
+        channel.send(hembed)
     }, ms(args[0]));
    }
 }
