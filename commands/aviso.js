@@ -15,9 +15,10 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:sapin:714717157656756235>Votação<a:sapin:714717157656756235>')
+  .setTitle('<a:ouu:714717157178736650>Sorteios<a:ouu:714717157178736650>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription('Querem fazer uma batalha de rima?')
+  .setDescription('Novo chat de sorteios!!!')
+  .setDescription('Agora o bot Desocupado faz sorteios!!!!')
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
