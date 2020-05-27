@@ -15,8 +15,7 @@ module.exports={
             .setFooter(`Desenvolvido por Soraya{Savanna}#7027 `);
             return message.reply(aembed)
         }
-        if(!args[0]) 
-        return message.channel.send(`Você não especificou o tempo!`)
+        if(!args[0])return message.channel.send(`Você não especificou o tempo!`)
         if(!args[0].endsWith("d")&&!args[0].endsWith("h")&&!args[0].endsWith("m")) return message.channel.send(`Você não usou a formatação correta para o horário!`)
         if(isNaN(args[0][0])) return message.channel.send(`Isso não é um número!`)
         let channel = message.mentions.channels.first()
