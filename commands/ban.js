@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
         .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
         return message.reply(lembed)
     }
-        let member = message.mentions.members.first()
+        let member = message.mentions.users.first();
         if(!member){
         const soraya = client.users.cache.get('594251581789044756');
         const oembed = new Discord.MessageEmbed()
