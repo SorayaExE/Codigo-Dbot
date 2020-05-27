@@ -64,7 +64,7 @@ module.exports={
         .setColor('#0099ff')
         .setFooter(`Desenvolvido por Soraya{Savanna}#7027`);
          await channel.send(Embed)
-        .react("🎉")
+        m.react("🎉")
 }
         setTimeout(() => {
             if(m.reactions.cache.get("🎉").count<=1){
