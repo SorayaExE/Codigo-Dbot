@@ -74,7 +74,7 @@ module.exports={
         let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
         const hembed = new MessageEmbed()
         .setColor('#0099ff')
-        .setTitle(`${message.author.username}`)
+        .setTitle(`${winner}`)
         .setDescription(`O vendedor do sorteio que estava valendo **${prize}** é... ${winner}`);
         channel.send(hembed)
     }, ms(args[0]));
