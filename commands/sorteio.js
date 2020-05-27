@@ -56,18 +56,19 @@ module.exports={
         .setTitle(`${message.author.username}`)
         .setDescription(`*Sorteio criado no ${channel}*`);
         message.channel.send(gembed)
-
+{
+        let Embed = new MessageEmbed()
         .setTitle(`<a:doguin:714717157098913822>Novo sorteio!<a:doguin:714717157098913822>`)
         .setDescription(`O ${message.author} está iniciando um sorteio e o premio é **${prize}**`)
         .setTimestamp(Date.now()+ms(args[0]))
         .setColor('#0099ff')
         .setFooter(`Desenvolvido por Soraya{Savanna}#7027`);
-        let m = await channel.send(Embed)
-        m.react("🎉")
-
+         await channel.send(Embed)
+        .react("🎉")
+}
         setTimeout(() => {
             if(m.reactions.cache.get("🎉").count<=1){
-                message.channel.send(`Reactions: ${m.reactions.cache.get("🎉").count}`) 
+                message.channel.send(`Reactions: ${reactions.cache.get("🎉").count}`) 
 {
                     const hembed = new MessageEmbed()
                     .setColor('#0099ff')
@@ -77,7 +78,7 @@ module.exports={
                 }
             }
             
-            let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
+            let winner = reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
             channel.send(`O vencedor do sorteio que estava valendo **${prize}** é... ${winner}`)
         }, ms(args[0]));
     }
