@@ -61,6 +61,7 @@ module.exports={
     .setTitle(`<a:doguin:714717157098913822>Novo sorteio!<a:doguin:714717157098913822>`)
     .setDescription(`O ${message.author} está iniciando um sorteio e o premio é **${prize}**`)
     .setTimestamp(Date.now()+ms(args[0]))
+    .setFooter('O sorteio será finalizado')
     .setColor(`BLUE`)
     let m = await channel.send(Embed)
     m.react("🎉")
