@@ -1,6 +1,6 @@
 const {MessageEmbed} = require('discord.js')
 const ms = require('ms');
-module.exports={
+module.exports={ 
     name: 'sorteio',
     description: 'Crie um simples sorteio',
     usage: '<tempo> <canal> <premio>',
@@ -57,22 +57,22 @@ module.exports={
         .setDescription(`*Sorteio criado no ${channel}*`);
         message.channel.send(gembed)
 {
-        let Embed = new MessageEmbed()
-        .setTitle(`<a:doguin:714717157098913822>Novo sorteio!<a:doguin:714717157098913822>`)
-        .setDescription(`O ${message.author} está iniciando um sorteio e o premio é **${prize}**`)
-        .setTimestamp(Date.now()+ms(args[0]))
-        .setColor('#0099ff')
-        .setFooter(`Desenvolvido por Soraya{Savanna}#7027`);
-        let m = await channel.send(Embed)
-        m.react("🎉")
+    let Embed = new MessageEmbed()
+    .setTitle(`<a:doguin:714717157098913822>Novo sorteio!<a:doguin:714717157098913822>`)
+    .setDescription(`O ${message.author} está iniciando um sorteio e o premio é **${prize}**`)
+    .setTimestamp(Date.now()+ms(args[0]))
+    .setColor(`BLUE`)
+    let m = await channel.send(Embed)
+    m.react("🎉")
+    setTimeout(() => {
+        if(m.reactions.cache.get("🎉").count<=1){
+            message.channel.send(`Reactions: ${m.reactions.cache.get("🎉").count}`)
+            return message.channel.send(`Poucas pessoas reagiram para ter um vencedor!`)
+        }
+        
+        let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
+        channel.send(`O vendedor do sorteio que estava valendo **${prize}** é... ${winner}`)
+    }, ms(args[0]));
+   }
 }
-        setTimeout(() => {
-            if(m.reactions.cache.get("🎉").count<=1){
-                    message.channel.send(`Reactions: ${m.reactions.cache.get("🎉").count}`)
-                    return message.channel.send(`Poucas pessoas reagiram para ter um vencedor!`)
-            }
-            let winner = m.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).random()
-            channel.send(`O vencedor do sorteio que estava valendo **${prize}** é... ${winner}`)
-        }, ms(args[0]));
-    }
 }
