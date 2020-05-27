@@ -8,12 +8,11 @@ module.exports={
     run: async(bot, message, client, args)=>{
         if (!message.member.permissions.has("BAN_MEMBERS")){
 
-            const soraya = client.cache.users('594251581789044756');
             const aembed = new Discord.MessageEmbed()
             .setColor('#0099ff')
             .setTitle(`${message.author.username}`)
             .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando')
-            .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+            .setFooter(`Desenvolvido por Soraya{Savanna}#7027 `);
             return message.reply(aembed)
         }
         if(!args[0]) 
