@@ -8,7 +8,7 @@ module.exports={
     run: async(bot, message, client, args)=>{
         if (!message.member.permissions.has("BAN_MEMBERS")){
 
-            const soraya = client.users.cache.get('594251581789044756');
+            const soraya = client.users.get('594251581789044756');
             const aembed = new Discord.MessageEmbed()
             .setColor('#0099ff')
             .setTitle(`${message.author.username}`)
