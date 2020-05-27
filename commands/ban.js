@@ -13,6 +13,7 @@ module.exports.run = async (client, message, args) => {
     }
         let member = message.mentions.members.first()
         if(!member){
+        const soraya = client.users.cache.get('594251581789044756');
         const oembed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
@@ -21,6 +22,7 @@ module.exports.run = async (client, message, args) => {
         return message.reply(oembed)
 }
         if(!member.bannable){
+        const soraya = client.users.cache.get('594251581789044756');
         const iembed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
@@ -31,6 +33,7 @@ module.exports.run = async (client, message, args) => {
         let reason = args.slice(1).join(' ')
         if(!reason) reason = "Nenhuma razão fornecida"
         await member.ban(reason)
+        const soraya = client.users.cache.get('594251581789044756');
         const uembed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
@@ -39,7 +42,6 @@ module.exports.run = async (client, message, args) => {
         .catch(error => message.reply(uembed))
 
         message.channel.send(`${message.author}`)
-
 
         let pEmbed = new Discord.RichEmbed()
         .setColor('#0099ff')
