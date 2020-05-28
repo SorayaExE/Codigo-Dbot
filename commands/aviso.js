@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<<a:pa:711787152350117989>Sorteio<a:pa:711787152350117989>')
+  .setTitle('<a:pa:711787152350117989>Sorteio<a:pa:711787152350117989>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
     { name: 'Novo sorteio!!!', value: 'Sorteio valendo uma key de jogo aleatório na steam!!!!' }
