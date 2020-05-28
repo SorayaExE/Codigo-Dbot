@@ -15,11 +15,10 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:ouu:714717157178736650>Sorteios<a:ouu:714717157178736650>')
+  .setTitle('<<a:pa:711787152350117989>Sorteio<a:pa:711787152350117989>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription('Agora o bot Desocupado faz sorteios!!!!')
   .addFields(
-    { name: 'Novo chat de sorteios!!!', value: 'Vão acontecer varios sorteios de agora em diante fique ligado!!!' },
+    { name: 'Novo sorteio!!!', value: 'Sorteio valendo uma key de jogo aleatório na steam!!!!' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
