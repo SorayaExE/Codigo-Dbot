@@ -15,10 +15,10 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:pa:711787152350117989>Sorteio<a:pa:711787152350117989>')
+  .setTitle('<a:oveia:715776701677961297>Promoção<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Novo sorteio!!!', value: 'Sorteio valendo uma key de jogo aleatório na steam!!!!' }
+    { name: 'Novo soldado promovido', value: 'Parabens Azevedo!!!!!' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
