@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
   .setTitle('<a:oveia:715776701677961297>Sorteio<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Hoje irei fazer mais um sorteio valendo uma key de jogo aleatorio', value: 'O sorteio vai iniciar as 18:00 e vai terminar as 18:30 então fiquem ligados!' }
+    { name: 'Estou fazendo o mesmo sorteio novamente', value: 'Fiquem ligado que o sorteio de 18:00 ainda vai aocntecer então serão 2 keys' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
