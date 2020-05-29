@@ -15,10 +15,10 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:pa:711787152350117989>Novo chat<a:pa:711787152350117989>')
+  .setTitle('<a:oveia:715776701677961297>Sorteio<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Chat novo para registrar todos os presos do server', value: 'Lolicons safrados!' }
+    { name: 'Hoje irei fazer mais um sorteio valendo uma key de jogo aleatorio', value: 'O sorteio vai iniciar as 18:00 e vai terminar as 18:30 então fiquem ligados!' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
