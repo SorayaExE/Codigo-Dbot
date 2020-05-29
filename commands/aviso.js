@@ -15,10 +15,10 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:Mupeti:714695782233800734>Preso<a:Mupeti:714695782233800734>')
+  .setTitle('<a:pa:711787152350117989>Novo chat<a:pa:711787152350117989>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Novo usuário preso!!', value: '<@548245007484583977>' }
+    { name: 'Chat novo para registrar todos os presos do server', value: 'Lolicons safrados!' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
