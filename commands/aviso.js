@@ -15,10 +15,10 @@ exports.run = async (client, message, args) => {
   const soraya = client.users.cache.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Aniversario!!!<a:oveia:715776701677961297>')
+  .setTitle('<a:Mupeti:714695782233800734>Preso<a:Mupeti:714695782233800734>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Parabens a aniversariante!!', value: '<@458764494454128642>' }
+    { name: 'Novo usuário preso!!', value: '<@548245007484583977>' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
