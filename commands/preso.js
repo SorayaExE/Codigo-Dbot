@@ -33,6 +33,7 @@ message.channel.send(`${message.author.username} **acaba de beijar** ${user.user
 */
 let avatar = message.author.displayAvatarURL({format: "png"});
   const soraya = client.users.cache.get('594251581789044756');
+  message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
         .setTitle('Prisão')
         .setColor('#000000')
