@@ -13,6 +13,7 @@ exports.run = async (client, message, args) => {
     }
   let avatar = message.author.displayAvatarURL({format: "png"});
   const soraya = client.users.cache.get('594251581789044756');
+  message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
   .setTitle('<a:oveia:715776701677961297>Sorteio<a:oveia:715776701677961297>')
