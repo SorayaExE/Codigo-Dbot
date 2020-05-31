@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:sapin:714717157656756235>Evento?<a:sapin:714717157656756235>')
+  .setTitle('<a:sapin:714717157656756235>Ja decidi o evento<a:sapin:714717157656756235>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Querem um evento?', value: 'Não sei qual evento fazer int deem sugestões de algum evento no chat <#711373698573140079> pfv' }
+    { name: 'Quem invitar 30 pessoas primeiro', value: 'vai ganhar a coleção de Hentai Girl completa na stem (5 jogos eu acho kk)' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
