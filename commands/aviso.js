@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Avisu<a:oveia:715776701677961297>')
+  .setTitle('<a:oveia:715776701677961297>Aviso<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Ae galeru', value: 'Tem um cara que esta em busca de uma WebNamorada alguem se disponibiliza' }
+    { name: 'Eu decidi que vou recriar um certo bot', value: 'Então aguardem um projeto grande' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
