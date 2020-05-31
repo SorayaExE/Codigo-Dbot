@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   .setTitle('<a:sapin:714717157656756235>Evento?<a:sapin:714717157656756235>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Querem um evento?', value: 'Não sei qual evento fazer int deem sugestões no chat <#711373698573140079> pfv' }
+    { name: 'Querem um evento?', value: 'Não sei qual evento fazer int deem sugestões de algum evento no chat <#711373698573140079> pfv' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
