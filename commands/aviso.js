@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   .setTitle('<a:sapin:714717157656756235>Ja decidi o evento<a:sapin:714717157656756235>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Quem invitar 30 pessoas primeiro', value: 'vai ganhar a coleção de Hentai Girl completa na stem (5 jogos eu acho kk)' }
+    { name: 'Quem convidar 30 pessoas primeiro', value: 'vai ganhar a coleção de Hentai Girl completa na steam (5 jogos eu acho kk)' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
