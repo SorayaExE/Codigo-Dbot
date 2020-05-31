@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:sapin:714717157656756235>Premio<a:sapin:714717157656756235>')
+  .setTitle('<a:oveia:715776701677961297>Avisu<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Querem outro premio?', value: 'para o evento de convidar 30 pessoas?' }
+    { name: 'Ae galeru', value: 'Tem um cara que esta em busca de uma WebNamorada alguem se disponibiliza' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
