@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Aviso<a:oveia:715776701677961297>')
+  .setTitle('<a:oveia:715776701677961297>Novo Sistema de RolePlay/Eroge RolePlay<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Eu decidi que vou recriar um certo bot', value: 'Então aguardem um projeto grande' }
+    { value: 'Para criar uma ficha se direcione até #📑┃τємρℓατєs Marque o Staff <@548245007484583977> para que sua ficha seja avaliada, Caso sua ficha seja aprovada, você receberá uma tag de Aprovado, assim ganhando a visão dos Canários, Qualquer Dúvida entre em contato com o único Staff que sabe oque é um Rp, Meu Querido amigo Calango, Caso queira uma Moradia ou um local de trabalho porfavor se direcione á sala <#716798770217746593>, Bom Dia, Boa Tarde, Boa Noite' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
