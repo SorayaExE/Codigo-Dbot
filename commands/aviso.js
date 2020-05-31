@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Sorteio<a:oveia:715776701677961297>')
+  .setTitle('<a:sapin:714717157656756235>Evento?<a:sapin:714717157656756235>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Estou fazendo o mesmo sorteio novamente', value: 'Fiquem ligado que o sorteio de 18:00 ainda vai aocntecer então serão 2 keys' }
+    { name: 'Querem um evento?', value: 'Não sei qual evento fazer int deem sugestões no chat <#711373698573140079> pfv' }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
