@@ -25,7 +25,8 @@ module.exports.run = async (bot, message, args) => {
       "russia": ":flag_ru: Russia",
       "southafrica": ":flag_za:  South Africa"
   };
-  const embed = new Discord.RichEmbed()
+  const soraya = client.users.cache.get('594251581789044756');
+  const embed = new Discord.MessageEmbed()
   .setAuthor(message.guild.name, message.guild.iconURL)
   .addField("Nome", message.guild.name, true)
   .addField("ID", message.guild.id, true)
@@ -37,6 +38,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Cargos", message.guild.roles.size, true)
   .addField("Data de criação", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`, true)
   .setThumbnail(message.guild.iconURL)
+  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
 message.channel.send({embed});
 }
 
