@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, bot, message, args) => {
   function checkDays(date) {
       let now = new Date();
       let diff = now.getTime() - date.getTime();
