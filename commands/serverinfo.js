@@ -25,7 +25,7 @@ module.exports.run = async (name, client, bot, message, args) => {
       "russia": ":flag_ru: Russia",
       "southafrica": ":flag_za:  South Africa"
   };
-  const soraya = client.users.cache.get('594251581789044756');
+  const soraya = client.users.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setAuthor(message.guild.name, message.guild.iconURL)
   .addField("Nome", message.guild.name, true)
