@@ -88,7 +88,7 @@ client.on("guildMemberAdd", async member => {
 	.setDescription('Bem-Vindo(a) ao Desocupados')
 	.setThumbnail(member.user.avatarURL())
 	.addFields(
-    { name: 'Quer uma parceria?', value: `Chame o ${soraya} no privado para mais informações` },
+    { name: 'Quer uma parceria?', value: `Veja se você cumpre os requisitos em <#711373686304931881>` },
     { name: 'Não esqueça de se registrar no:', value: '<#711373689504923708>' }
   )
   .addField('Leia as regras', '<#711670368112476181>', true)
