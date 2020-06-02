@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (name, client, bot, message, args, get) => {
+module.exports.run = async (name, client, bot, message, args) => {
   function checkDays(date) {
       let now = new Date();
       let diff = now.getTime() - date.getTime();
@@ -25,7 +25,6 @@ module.exports.run = async (name, client, bot, message, args, get) => {
       "russia": ":flag_ru: Russia",
       "southafrica": ":flag_za:  South Africa"
   };
-  const soraya = client.users.get('594251581789044756');
   const embed = new Discord.MessageEmbed()
   .setAuthor(message.guild.name, message.guild.iconURL)
   .addField("Nome", message.guild.name, true)
@@ -38,7 +37,6 @@ module.exports.run = async (name, client, bot, message, args, get) => {
   .addField("Cargos", message.guild.roles.size, true)
   .addField("Data de criação", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`, true)
   .setThumbnail(message.guild.iconURL)
-  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
 message.channel.send({embed});
 }
 
