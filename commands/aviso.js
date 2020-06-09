@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Staff<a:oveia:715776701677961297>')
+  .setTitle('<a:Mupeti:714695782233800734>Staff<a:Mupeti:714695782233800734>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
     { name: 'É com muito prazer que venho informar que estão abertas vagas para staff!', value: `Quem estiver interessado favor chamar ${soraya}` }
