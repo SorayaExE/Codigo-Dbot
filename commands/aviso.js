@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:Mupeti:714695782233800734>Staff<a:Mupeti:714695782233800734>')
+  .setTitle('<a:sapin:714717157656756235>Dexculpa<a:sapin:714717157656756235>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'É com muito prazer que venho informar que estão abertas vagas para staff!', value: `Quem estiver interessado favor chamar ${soraya}` }
+    { name: 'Primeiro de tudo eu peço desculpa a todos por ter meio que "abandonado" o server', value: `E venho avisar que voltei e farei de tudo pra reviver essa bagaça` }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
