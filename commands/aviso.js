@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:sapin:714717157656756235>Dexculpa<a:sapin:714717157656756235>')
+  .setTitle('<a:Mupeti:714695782233800734>Pokecord<a:Mupeti:714695782233800734>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Primeiro de tudo eu peço desculpa a todos por ter meio que "abandonado" o server', value: `E venho avisar que voltei e farei de tudo pra reviver essa bagaça` }
+    { name: 'Venho com muita felicidade avisar que:', value: `O Pokécord ta de volta!!!!!` }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
