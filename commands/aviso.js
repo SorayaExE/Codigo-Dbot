@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:Mupeti:714695782233800734>Pokecord<a:Mupeti:714695782233800734>')
+  .setTitle('<a:Mupeti:714695782233800734>Sorteio!<a:Mupeti:714695782233800734>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Venho com muita felicidade avisar que:', value: `O Pokécord ta de volta!!!!!` }
+    { name: 'Novo sorteio criado em', value: `<#715474476610879529>` }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
