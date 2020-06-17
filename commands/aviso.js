@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   .setTitle('<a:Mupeti:714695782233800734>Sorteio!<a:Mupeti:714695782233800734>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Novo sorteio criado em', value: `<#715474476610879529>` }
+    { name: 'Tive que reiniciar o sorteio por problemas com o bot vão em', value: `<#715474476610879529> e marquem a reação para participar novamente` }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
