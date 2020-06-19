@@ -16,9 +16,7 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Desabafos<a:oveia:715776701677961297>')
-  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription(`Caso você queira desabafar com alguem, venha para este chat com certeza vai aparecer alguem legal para conversar!`)
+  .setDescription(`Olá seja bem vindo ao nosso servidor,antes de tudo precisamos que vc se registre e vire um membro por completo!...siga os passos abaixo:point_down::point_down::point_down:`)
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
