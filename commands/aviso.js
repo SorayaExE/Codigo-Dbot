@@ -22,7 +22,6 @@ exports.run = async (client, message, args) => {
     { name: 'Femea', value: ':woman_pouting:' }
   )
   .setTimestamp()
-	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
 
   message.channel.send('@everyone').then(marcados =>
