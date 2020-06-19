@@ -16,11 +16,11 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
+  .setDescription('Você se considera:')
   .addFields(
-    { name: 'Agora a perguta q todos querem saber....', value: 'Você prefere:' },
-    { name: 'Loli', value: ':man_police_officer:' },
-    { name: 'Oppai', value: ':new_moon_with_face:' },
-    { name: 'Futanari', value: ':eggplant:' }
+    { name: 'L.G.B.T', value: ':ouu:' },
+    { name: 'Hetero', value: ':q_muuu:' },
+    { name: 'Indefinido', value: ':sapin:' }
   )
   await message.channel.send(embed);
 
