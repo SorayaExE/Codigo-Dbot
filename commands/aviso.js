@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:Mupeti:714695782233800734>Sorteio!<a:Mupeti:714695782233800734>')
+  .setTitle('<a:oveia:715776701677961297>Apresente-se<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .addFields(
-    { name: 'Tive que reiniciar o sorteio por problemas com o bot vão em', value: `<#715474476610879529> e marquem a reação para participar novamente` }
+    { name: 'Diga aqui:', value: `O que diz a respeito de você como nome, idade, personalidade, hobbies e etc.` }
   )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
