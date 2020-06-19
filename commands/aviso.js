@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
   .setColor('RANDOM')
   .setTitle(`<a:oveia:715776701677961297>Votação<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription('Vocês querer Evento:calendar_spiral: Sorteio :confetti_ball: ou nada <a:sapin:714717157656756235>?')
+  .setDescription('Votação (vocês querer) se encerra hoje 20:00')
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
