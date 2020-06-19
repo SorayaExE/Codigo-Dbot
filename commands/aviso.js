@@ -21,7 +21,6 @@ exports.run = async (client, message, args) => {
     { name: 'Maxo', value: ':person_pouting:' },
     { name: 'Femea', value: ':woman_pouting:' }
   )
-  .setTimestamp()
   await message.channel.send(embed);
 
   message.channel.send('@everyone').then(marcados =>
