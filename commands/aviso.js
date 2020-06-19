@@ -16,11 +16,9 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Apresente-se<a:oveia:715776701677961297>')
+  .setTitle('<a:oveia:715776701677961297>Animes<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .addFields(
-    { name: 'Diga aqui:', value: `O que diz a respeito de você como nome, idade, personalidade, hobbies e etc.` }
-  )
+  .setDescription(`Aqui é um lugar para você dar dicas de animes para outras pessoas!`)
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
