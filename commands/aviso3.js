@@ -16,9 +16,9 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription(`Como você veio ao mundo?`)
-  .setDescription(`Maxo::person_pouting:`)
-  .setDescription(`Femea::woman_pouting:`)
+  .setDescription(`Qual sua idade?`)
+  .setDescription(`+18::beer:`)
+  .setDescription(`-18::underage:`)
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
