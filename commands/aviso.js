@@ -16,8 +16,8 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
+  .setDescription('Como você veio ao mundo?')
   .addFields(
-    { name: 'Como você veio ao mundo?'},
     { name: 'Maxo', value: ':person_pouting:' },
     { name: 'Femea', value: ':woman_pouting:' }
   )
