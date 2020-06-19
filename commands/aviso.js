@@ -16,9 +16,11 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription(`Como você veio ao mundo?`)
-  .setDescription(`Maxo::person_pouting:`)
-  .setDescription(`Femea::woman_pouting:`)
+  .addFields(
+    { name: 'Como você veio ao mundo?'},
+    { name: 'Maxo', value: ':person_pouting:' },
+    { name: 'Femea', value: ':woman_pouting:' }
+  )
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
