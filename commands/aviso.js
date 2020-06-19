@@ -16,9 +16,9 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle(`<a:oveia:715776701677961297>Atualização<a:oveia:715776701677961297>`)
+  .setTitle(`<a:oveia:715776701677961297>Votação<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription('Atualização finalizada após muitos erros finalmente foi finalizada espero que gostem!')
+  .setDescription('Vocês querer Evento:calendar_spiral: Sorteio :confetti_ball: ou nada :sapin:?')
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
