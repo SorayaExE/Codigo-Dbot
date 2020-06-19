@@ -16,9 +16,9 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('<a:oveia:715776701677961297>Animes<a:oveia:715776701677961297>')
+  .setTitle('<a:oveia:715776701677961297>Desabafos<a:oveia:715776701677961297>')
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription(`Aqui é um lugar para você dar dicas de animes para outras pessoas!`)
+  .setDescription(`Caso você queira desabafar com alguem, venha para este chat com certeza vai aparecer alguem legal para conversar!`)
   .setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
