@@ -16,10 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription('Qual sua idade?')
+  .setDescription('Qual você prefere?')
   .addFields(
-    { name: '+18', value: ':beer:' },
-    { name: '-18', value: ':underage:' }
+    { name: 'Doce', value: ':dango:' },
+    { name: 'Salgado', value: ':hamburger:' }
   )
   await message.channel.send(embed);
 

@@ -16,14 +16,11 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription('Qual sua região?')
+  .setDescription('Você está:')
   .addFields(
-    { name: 'Nordeste', value: ':green_apple:' },
-    { name: 'Norte', value: ':apple:' },
-    { name: 'Centro-Oeste', value: ':pear:' },
-    { name: 'Sul', value: ':tangerine:' },
-    { name: 'Sudeste', value: ':lemon:' },
-    { name: 'Estrangeiro', value: ':strawberry:' }
+    { name: 'Casado', value: ':bride_with_veil:' },
+    { name: 'Namorando', value: ':couple_with_heart:' },
+    { name: 'Solteiro', value: ':person_tipping_hand:' }
   )
   await message.channel.send(embed);
 
