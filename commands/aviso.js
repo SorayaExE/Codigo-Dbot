@@ -16,12 +16,10 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription('Você se considera:')
-  .addFields(
-    { name: 'L.G.B.T', value: '<a:ouu:714717157178736650>' },
-    { name: 'Hetero', value: '<a:doguin:714717157098913822>' },
-    { name: 'Indefinido', value: '<a:sapin:714717157656756235>' }
-  )
+  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
+  .setDescription('Obrigado por se registrar:sparkling_heart: agora vc realmente é um desocupado <a:oveia:715776701677961297>')
+  .setTimestamp()
+  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
 
   message.channel.send('@everyone').then(marcados =>
