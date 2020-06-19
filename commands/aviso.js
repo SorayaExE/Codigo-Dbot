@@ -18,9 +18,9 @@ exports.run = async (client, message, args) => {
   .setColor('RANDOM')
   .setDescription('Você se considera:')
   .addFields(
-    { name: 'L.G.B.T', value: ':ouu:' },
-    { name: 'Hetero', value: ':q_muuu:' },
-    { name: 'Indefinido', value: ':sapin:' }
+    { name: 'L.G.B.T', value: '<a:ouu:714717157178736650>' },
+    { name: 'Hetero', value: '<a:q_muuu:638112240452763648>' },
+    { name: 'Indefinido', value: '<a:sapin:714717157656756235>' }
   )
   await message.channel.send(embed);
 
