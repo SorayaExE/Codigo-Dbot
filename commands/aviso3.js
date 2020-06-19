@@ -16,11 +16,11 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription('Você está:')
+  .setDescription('Esta usando?')
   .addFields(
-    { name: 'Casado', value: ':bride_with_veil:' },
-    { name: 'Namorando', value: ':couple_with_heart:' },
-    { name: 'Solteiro', value: ':person_tipping_hand:' }
+    { name: 'PC', value: ':computer:' },
+    { name: 'Mobile', value: ':iphone:' },
+    { name: 'Outros', value: ':candy:' }
   )
   await message.channel.send(embed);
 
