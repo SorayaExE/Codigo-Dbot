@@ -16,12 +16,11 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription(`Esta usando?`)
-  .setDescription(`PC::computer:`)
-  .setDescription(`Mobile::iphone: `)
-  .setDescription(`Outros: :candy:`)
-  .setTimestamp()
-	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+  .setDescription('Qual sua idade?')
+  .addFields(
+    { name: '+18', value: ':beer:' },
+    { name: '-18', value: ':underage:' }
+  )
   await message.channel.send(embed);
 
   message.channel.send('@everyone').then(marcados =>

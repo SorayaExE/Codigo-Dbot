@@ -16,11 +16,15 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setDescription(`Qual sua idade?`)
-  .setDescription(`+18::beer:`)
-  .setDescription(`-18::underage:`)
-  .setTimestamp()
-	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+  .setDescription('Qual sua região?')
+  .addFields(
+    { name: 'Nordeste', value: ':green_apple:' },
+    { name: 'Norte', value: ':apple:' },
+    { name: 'Centro-Oeste', value: ':pear:' },
+    { name: 'Sul', value: ':tangerine:' },
+    { name: 'Sudeste', value: ':lemon:' },
+    { name: 'Estrangeiro', value: ':strawberry:' }
+  )
   await message.channel.send(embed);
 
   message.channel.send('@everyone').then(marcados =>
