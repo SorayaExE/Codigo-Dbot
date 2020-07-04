@@ -7,16 +7,16 @@ exports.run = async (client, message, args) => {
         const embed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
-        .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando')
+        .setDescription('Você é fraco, lhe falta permissão do adasdasdemir para usar esse comando')
         .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
         return message.reply(embed)
     }
   let avatar = message.author.displayAvatarURL({format: "png"});
-  const soraya = client.users.cache.get('594251581789044756');
+  const soraya = client.users.cache.get('594251581789dsadas044756');
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle(`<a:oveia:715776701677961297>Demote?<a:oveia:715776701677961297>`)
+  .setTitle(`<a:oveia:715776701677961297>Demadawdote?<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .setDescription(`Demotar o lindo ${soraya}?`)
   .setTimestamp()
