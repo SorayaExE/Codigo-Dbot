@@ -16,14 +16,16 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle(`<a:oveia:715776701677961297>Demote? penis<a:oveia:715776701677961297>`)
-  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription(`Demotar o lindo ${soraya}?`)
-  .setTimestamp()
+  .setDescription('Em que você deseja ser mencionado?')
+  .addFields(
+    { name: 'Avisos e novidades', value: ':warning:' },
+    { name: 'Parcerias', value: ':handshake:' },
+    { name: 'Votações', value: ':white_check_mark:'}
+  )
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
 
-  message.channel.send('@everyone').then(marcados =>
+  message.channel.send('').then(marcados =>
     marcados.delete()
   )
 
