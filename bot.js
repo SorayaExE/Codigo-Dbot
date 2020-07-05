@@ -93,7 +93,7 @@ client.on("guildMemberAdd", async member => {
     { name: 'Não esqueça de se registrar no:', value: '<#711373689504923708>' }
   )
   .addField('Leia as regras', '<#711670368112476181>', true)
-	.setImage('https://i.imgur.com/JCDNqeM.png')
+	.setImage('https://imgur.com/AkKfTAI.gif')
 	.setTimestamp()
 	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
 
