@@ -16,9 +16,9 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle(`<a:oveia:715776701677961297>Menções<a:oveia:715776701677961297>`)
+  .setTitle(`<a:oveia:715776701677961297>Pobreflix<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription(`Novo sistema de menções em <#729041717084291193> não iremos mais marcer everyone no server apenas receberá as menções desejadas.(Esse é o ultimo everyone no server)`)
+  .setDescription(`Querem um cineminha no sabado?`)
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
