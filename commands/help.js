@@ -22,7 +22,7 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   { name: 'Para abraçar alguém:', value: 'digite d!abraçar (@do usuário)' },
   { name: 'Para fazer carinho em alguém:', value: 'digite d!carinho (@do usuário)' },
   { name: 'Para pegar um lolicon:', value: 'digite d!lolicon (@do usuário)' },
-  { name: 'Achou algum erro ou bug? Tem alguma sujestão?', value: 'digite d!contado para entrar em contato comigo!' }
+  { name: 'Achou algum erro ou bug? Tem alguma sujestão?', value: 'digite d!contado no chat <#711373693036658753> para entrar em contato comigo!' }
 )
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
