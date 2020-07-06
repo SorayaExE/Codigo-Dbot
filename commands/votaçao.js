@@ -2,12 +2,12 @@ exports.run = async (client, message, args) => {
     if (!message.member.permissions.has("MANAGE_MESSAGES")){
 
         const soraya = client.users.cache.get('594251581789044756');
-        const embed = new Discord.MessageEmbed()
+        const pa = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle(`${message.author.username}`)
         .setDescription('Você é fraco, lhe falta permissão do ademir para usar esse comando')
         .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-        return message.reply(embed)
+        return message.reply(pa)
     }
 
     if (!args.join(' ')) return message.channel.send({embed: {
