@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
   .setColor('RANDOM')
   .setTitle(`<a:oveia:715776701677961297>PobreFlix<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setTitle(`Favor deem sugestões de filmes em <#711373698573140079> ou vote em algum filme que queira para o cineminha!`)
+  .setTitle(`Favor deem sugestões de filmes no canal de sugestões ou vote em algum filme que queira para o cineminha!`)
   .setDescription(`O filme mais votado será passado na PobreFlix no sábado!`)
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
