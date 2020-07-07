@@ -1,5 +1,8 @@
 const Discord = require('discord.js')
 
+const moment = require('moment')
+moment.locale('pt-br')
+
 module.exports = {
 
   run: function (client, message, args) {
@@ -10,8 +13,8 @@ module.exports = {
       brazil: ':flag_br: Brazil'
     }
 
-    const soraya = client.users.cache.get('594251581789044756');
     const embed = new Discord.RichEmbed()
+    const soraya = client.users.cache.get('594251581789044756')
       .setColor(client.displayHexColor === '#000000' ? '#ffffff' : client.displayHexColor)
       // .setThumbnail(message.guild.iconURL)
       .setAuthor('🔍 Informações do servidor')
