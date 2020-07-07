@@ -80,32 +80,6 @@ client.on("message", async message => {
 
 });
 
-if (message.content.startsWith(prefix + "userinfo")) {
-  let user = message.mentions.user.first() || message.author;
-
-  let userinfo = {};
-  userinfo.avatar = user.displayAvatarURL()
-  userinfo.name = user.username;
-  userinfo.discrim = `#${user.discriminator}`;
-  userinfo.id = user.id;
-  userinfo.status = user.presence.status;
-  userinfo.registered = moment.utc(message.guild.members.get(user.id).user.createdAt).format("dddd, MMMM De, YYYY");
-  userinfo.joined = moment.utc(message.guild.members.get(user.id).joinedAt).format("dddd, MMMM De, YYYY");
-
-  const soraya = client.users.cache.get('594251581789044756');
-  const embed = new Discord.MessageEmbed()
-  .setAuthor(user.tag, userinfo.avatar)
-  .setThumbnail(userinfo.avatar)
-  .addField(`Nome de usuário`, userinfo.name, true)
-  .addField(`Discriminator`, userinfo.discrim, true)
-  .addField(`ID`, userinfo.id, true)
-  .addField(`Status`, userinfo.status, true)
-  .addField(`Entrou no Discord em:`, userinfo.registered)
-  .addField(`Entrou no server em:`, userinfo.joined )
-	.setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-
-   return message.channel.send(embed);
-}
 
 client.on("guildMemberAdd", async member => {
 
