@@ -21,7 +21,7 @@ module.exports = {
       .addField('**ID**', message.guild.id, true)
       .addField('**Dono(a)**', `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)
       .addField('**Região**', region[message.guild.region], true)
-      .addField('**Humanos | Bots**', `${message.guild.members.filter(member => !member.user.bot).size} | ${message.guild.members.filter(member => member.user.bot).size}`)
+      .addField('**Humanos | Bots**', `${message.guild.members.filter.cache(member => !member.user.bot).size} | ${message.guild.members.filter(member => member.user.bot).size}`)
       .addField('**Canais**', message.guild.channels.size, true)
       .addField('**Cargos**', message.guild.roles.size, true)
       .addField('**Criado em**', formatDate('DD/MM/YYYY, às HH:mm:ss', date))

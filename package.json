@@ -16,6 +16,7 @@
     "gif-to-apng": "^0.1.2",
     "jimp": "^0.6.0",
     "moment": "^2.27.0",
+    "moment-duration-format": "^2.3.2",
     "node-fetch": "^2.6.0",
     "novelcovid": "^2.1.1",
     "uuid": "^8.1.0"
