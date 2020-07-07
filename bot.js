@@ -80,7 +80,6 @@ client.on("message", async message => {
 
 });
 
-
 client.on("guildMemberAdd", async member => {
 
   const soraya = client.users.cache.get('594251581789044756');

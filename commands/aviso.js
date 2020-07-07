@@ -16,14 +16,15 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle(`<a:oveia:715776701677961297>Pobreflix<a:oveia:715776701677961297>`)
+  .setTitle(`<a:oveia:715776701677961297>PobreFlix<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setDescription(`Querem um cineminha no sabado?`)
+  .setTitle(`Favor deem sugestões de filmes em <#711373698573140079> ou vote em algum filme que queira para o cineminha!`)
+  .setDescription(`O filme mais votado será passado na PobreFlix no sábado!`)
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   await message.channel.send(embed);
 
-  message.channel.send('@everyone').then(marcados =>
+  message.channel.send('@--{⚠️}Avisos e Novidades').then(marcados =>
     marcados.delete()
   )
 
