@@ -13,8 +13,7 @@ module.exports = {
       brazil: ':flag_br: Brazil'
     }
 
-    const embed = new Discord.RichEmbed()
-    const soraya = client.users.cache.get('594251581789044756')
+    const embed = new Discord.MessageEmbed()
       .setColor(client.displayHexColor === '#000000' ? '#ffffff' : client.displayHexColor)
       // .setThumbnail(message.guild.iconURL)
       .setAuthor('🔍 Informações do servidor')
@@ -27,7 +26,7 @@ module.exports = {
       .addField('**Cargos**', message.guild.roles.size, true)
       .addField('**Criado em**', formatDate('DD/MM/YYYY, às HH:mm:ss', date))
       .addField('**Você entrou em**', formatDate('DD/MM/YYYY, às HH:mm:ss', joined))
-      .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
+      .setFooter(`Desenvolvido por: <@594251581789044756>`)
       .setTimestamp()
 
     // Aqui sera enviado o embed no canal que o usuário executo o comando
