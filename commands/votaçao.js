@@ -33,5 +33,8 @@ exports.run = async (client, message, args) => {
     }}).then((message) => {
         message.react("✅");
         message.react("❌");
-    });
-};
+     });
+     message.channel.send('@--{☑️}Avisos votações').then(marcados =>
+        marcados.delete()
+      )
+    };
