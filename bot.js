@@ -116,7 +116,7 @@ client.on("guildMemberAdd", async member => {
       { name: 'Quer uma parceria?', value: 'Consulte o chat Informações na categoria de parceria' },
       { name: 'Não esqueça de se registrar no:', value: '<#711373689504923708>' },
       { name: 'Qualquer duvida sobre o bot Desocupado use:', value: 'd!help que o bot vai lhe mandar os comandos no seu privado' },
-      { name: 'Qualquer bug ou denuncia', value: 'chame um staff no privado!' },
+      { name: 'Qualquer bug ou denuncia ou sugestão', value: 'use o comando d!contato em algum chat no servidor!' },
       
     )
     .addField('Leia as regras', '<#711670368112476181>', true)
