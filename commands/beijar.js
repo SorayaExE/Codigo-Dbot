@@ -49,27 +49,5 @@ let avatar = message.author.displayAvatarURL({format: "png"});
         .setThumbnail(avatar)
         .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
         .setAuthor(message.author.tag, avatar);
-  await message.channel.send(embed).then(msg => { 
-  
-    msg.react(':arrow_right_hook: ').then(() => msg.react(':arrow_right_hook: ')) 
-
-    const filter = (reaction, user) => { // Criando um filtro para quem clicou no emoji
-      return [':arrow_right_hook: ', ':arrow_right_hook:'].includes(reaction.emoji.name) && user.id === message.author.id; 
-    };
-    msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time']})
-      .then(collected => { 
-        const reaction = collected.first();
-    
-        if (reaction.emoji.name === ':arrow_right_hook:') {
-          message.reply('Tchau'); 
-        } 
-    
-       if (reaction.emoji.name === ':arrow_right_hook:') { 
-         message.reply('Oi')
-                }
-            })
-      .catch(collected => {
-        message.reply('o tempo para escolher excedeu! Tente novamente.');
-      });
-    })
+  await message.channel.send(embed)
   }
