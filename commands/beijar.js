@@ -48,9 +48,9 @@ let avatar = message.author.displayAvatarURL({format: "png"});
         .setTimestamp()
         .setThumbnail(avatar)
         .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
-        .setAuthor(message.author.tag, avatar)
+        .setAuthor(message.author.tag, avatar);
+  await message.channel.send(embed)
         .then((message) => {
-          message.react(":repeat:");
-       })
-  await message.channel.send(embed);
+      message.react(":repeat:");
+ })
 }
