@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
   .setTitle(`Favor deem sugestões de filmes no canal de sugestões ou vote em algum filme que queira para o cineminha!`)
   .setDescription(`O filme mais votado será passado na PobreFlix no sábado!`)
   .setTimestamp()
-  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+  .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
   await message.channel.send(embed);
 
   message.channel.send('@--{⚠️}Avisos e Novidades').then(marcados =>
