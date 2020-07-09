@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
 
     if (!args.join(' ')) return message.channel.send({embed: {
         title: "Uso incorreto !",
-        description: "Uso correto: votacao <titulo> \nEx. votacao Devemos banir fulano do servidor?",
+        description: "Uso correto: votaçao <titulo> \nEx. votação Devemos banir fulano do servidor?",
         footer: {
             icon_url: message.author.avatarURL,
             text: `Comando utilizado por ${message.author.username}`
