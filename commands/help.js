@@ -26,7 +26,6 @@ let avatar = message.author.displayAvatarURL({format: "png"});
 )
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
-  let avatar = message.author.displayAvatarURL({format: "png"});  
   message.delete().catch(O_o => {});
   const newembed = new Discord.MessageEmbed()
   .setColor('#0099ff')
