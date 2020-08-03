@@ -27,7 +27,6 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
   message.delete().catch(O_o => {});
-  let avatar = message.author.displayAvatarURL({format: "png"});
   const newembed = new Discord.MessageEmbed()
   .setColor('#0099ff')
   .setTitle('Help Desocupado Bot')
