@@ -30,7 +30,7 @@ let avatar = message.author.displayAvatarURL({format: "png"});
   const newembed = new Discord.MessageEmbed()
   .setColor('#0099ff')
   .setTitle('Help Desocupado Bot')
-  .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
+  .setAuthor(`${message.author.username}`, `${message.author.avatarURL}`)
   .setDescription('Comandos enviados no seu privado')
   .setTimestamp()
   message.channel.send(newembed)
