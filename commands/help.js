@@ -26,13 +26,14 @@ let avatar = message.author.displayAvatarURL({format: "png"});
 )
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL());
+  let avatar = message.author.displayAvatarURL({format: "png"});  
   message.delete().catch(O_o => {});
   const newembed = new Discord.MessageEmbed()
   .setColor('#0099ff')
   .setTitle('Help Desocupado Bot')
-  .setAuthor(`${message.author.username}`)
   .setDescription('Comandos enviados no seu privado')
   .setTimestamp()
+  .setAuthor(message.author.tag, avatar);
   message.channel.send(newembed)
   await message.author.send(embed);
 }
