@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   .setTitle(`<a:oveia:715776701677961297>Novidades da autalização<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
   .setTitle(`Canais de anuncios!\n> Nova tela de boas vindas!`)
-  .setDescription('https://imgur.com/uvq8bUM.png')
+  .setImage('https://imgur.com/uvq8bUM.png')
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
   await message.channel.send(embed);
