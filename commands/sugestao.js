@@ -51,10 +51,6 @@ exports.run = async (client, message, args) => {
 
         for (const i in emojis){
             await msg.react(emojis[i])
-
-            message.channel.send('@everyone').then(marcados =>
-                marcados.delete()
-              )
         }
     }
 
