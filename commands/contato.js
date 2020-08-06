@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
     message.channel.send({embed: {
         color: ('RANDOM'),
         author: {
-            name: client.user.username,
+            name: message.author.tag,
             icon_url: client.user.avatarURL
         },
         title: "Entre em contato comigo",
