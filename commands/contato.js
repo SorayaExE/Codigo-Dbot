@@ -9,6 +9,6 @@ exports.run = async (client, message) => {
             icon_url: client.user.avatarURL
         },
         title: "Entre em contato comigo",
-        description: `>Encontrou algum problema? \n>Tem alguma sugestão de comando? \n>Tem alguma duvida? \n>Fale com o meu criador e dono do server <@594251581789044756>`
+        description: `>Encontrou algum problema? \n>Tem alguma sugestão de comando? \n>Tem alguma duvida? \n>Use o comando d!sugestao.`
     }});
 }

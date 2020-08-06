@@ -34,7 +34,7 @@ exports.run = async (client, message, args) => {
         message.react("✅");
         message.react("❌");
      });
-     message.channel.send('@--{☑️}Avisos votações').then(marcados =>
+     message.channel.send('@everyone').then(marcados =>
         marcados.delete()
       )
     };
