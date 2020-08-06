@@ -16,10 +16,14 @@ exports.run = async (client, message, args) => {
   message.delete().catch(O_o => {});
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle(`<a:oveia:715776701677961297>Novidades da autalização<a:oveia:715776701677961297>`)
+  .setTitle(`<a:oveia:715776701677961297>Requisitos para parceria Desocupados<a:oveia:715776701677961297>`)
   .setAuthor('Desocupado-Bot', 'https://i.imgur.com/f5dzzNq.png')
-  .setTitle(`Canais de anuncios!\n> Nova tela de boas vindas!`)
-  .setImage('https://imgur.com/uvq8bUM.png')
+  .addFields(
+    { name: 'Quantos membros o server precisa ter?', value: '170 membros ou mais.' },
+    { name: 'Precisa de alguma tag de parceiros?', value: 'O server obrigatoriamente tem que ter um chat e uma tag para parceiros.' },
+    { name: 'No mínimo quantos staffs?', value: 'O server precisa no mínimo ter 3 staffs ativos.' },
+    { name: 'Caso cumpra os requisiros chame o', value: `${soraya.tag}  no privado` }
+  )
   .setTimestamp()
   .setFooter(`Desenvolvido por: ${soraya.tag} `, soraya.avatarURL())
   await message.channel.send(embed);
