@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     if(!args[0]) {
         return message.channel.send({embed: {
             title: "Uso incorreto!",
-            description: ">Uso correto: d!sugestao (sua sugestão).",
+            description: ">Uso correto: d!sugestao (sugestão).",
             footer: {
                 icon_url: message.author.avatarURL,
                 text: `Comando utilizado por ${message.author.username}`
