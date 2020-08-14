@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   .setDescription('Qual você prefere?')
   .addFields(
     { name: 'Doce', value: ':dango:' },
-    { name: 'Salgado', value: ':hamburger:' }
+    { name: 'Salgado', value: ':hamburger:' }sfsdf
   )
   await message.channel.send(embed);
 
